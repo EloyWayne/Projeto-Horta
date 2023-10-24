@@ -31,6 +31,7 @@ APPS_DJANGO = [
 APPS_PROPIETARIO = [
     'apps.LoginUser',
     'apps.LoginCliente',
+    'apps.pedido',
 ]
 
 APPS_TERCEIROS = [
