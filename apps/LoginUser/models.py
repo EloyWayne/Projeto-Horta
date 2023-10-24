@@ -28,12 +28,21 @@ class Produtor(models.Model):
         verbose_name_plural = "Produtor"
 
 
+class Categoria(models.Model):
+    categoria = models.CharField( max_length=100)
+    
+    def __str__(self):
+        return self.categoria
+
+    class Meta():
+        verbose_name = "Categoria"
+        verbose_name_plural = "Categoria"
 
 class Produto(models.Model):
     nome = models.CharField(max_length=100)
     descricao = models.TextField()
     preco = models.DecimalField(max_digits=10, decimal_places=2)
-    categoria = models.CharField(max_length=100)
+    categoria = models.ForeignKey(Categoria, on_delete=models.PROTECT)
     produtor = models.ForeignKey(Produtor, on_delete=models.PROTECT)
     
 

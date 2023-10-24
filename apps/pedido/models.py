@@ -7,9 +7,5 @@ class Pedido(models.Model):
     cliente_nome = models.CharField(max_length=100)
     endereco_entrega = models.CharField(max_length=200)
 
-    def calcular_valor_total(self):
-        valor_total = sum(produto.preco for produto in self.produtos.all())
-        return valor_total
-
     def __str__(self):
-        return f"Pedido #{self.id}"
+        return self.cliente_nome
