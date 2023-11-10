@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import Pedido
+from .models import Produto
 
-def PedidoView(request):
-    view_lista = Pedido.objects.all()
-    return render(request, 'core.html', {'Pedido': view_lista})
+def ProdutoView(request):
+    view_lista = Produto.objects.all()
+    return render(request, 'core.html', {'produtos': view_lista})

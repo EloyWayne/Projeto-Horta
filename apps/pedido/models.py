@@ -1,24 +1,15 @@
 from django.db import models
+from django.contrib.auth.models import User
+from apps.produtos.models import Produto  
 
-class Categoria(models.Model):
-    nome_categoria = models.CharField(max_length=100)
 
-    def __str__(self):
-        return self.nome_categoria
-    
-    class Meta():
-        verbose_name = "Categoria"
-        verbose_name_plural = "Categoria"
-
-class Produto(models.Model):
-    nome = models.CharField(max_length=100)
-    descricao = models.CharField(max_length=100)
-    preco = models.DecimalField(max_digits=10, decimal_places=2, blank=False)
-    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
+class Pedido(models.Model):
+    produtos = models.ManyToManyField(Produto)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.nome
-        
+        return self.user.username
+
     class Meta():
-        verbose_name = "Produto"
-        verbose_name_plural = "Produto"
+        verbose_name = "Pedido"
+        verbose_name_plural = "Pedido"
