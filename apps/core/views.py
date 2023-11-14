@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from apps.core.forms import LoginForm
 import pprint
+
 def DadosPessoaisView(request):		
     return render(request, 'login.html')
 
@@ -13,7 +14,7 @@ def entrar(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('pagina_home')
+            return redirect('home')
         else:
             form.add_error(None, 'Nome de usuário ou senha incorretos')
     else:

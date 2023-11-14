@@ -166,8 +166,8 @@
 
     
 <main class="form-signin w-100 m-auto">
-  <form>
-    <a  href="{% url 'home' %}"><img style="width: 200px;" src="{% static '/images/logo-removebg-preview.png' %}" alt="Erro"  ></a>
+  <form method="POST">
+    <a  href="{% url 'home' %}"><img style="width: 200px;" src="{% static '/images/logo.png' %}" alt="Erro"  ></a>
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
     {% csrf_token %}
     {{form.as_p}}
