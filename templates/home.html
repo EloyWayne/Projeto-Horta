@@ -18,7 +18,7 @@
 					<nav id="nav">
 						<ul>
 							<li><a href="{% url 'home' %}">Home</a></li>
-							<li>
+							<!--<li>
 								<a href="#" class="icon solid fa-angle-down">Options</a>
 								<ul>
 									<li><a href="generic.html">Generic</a></li>
@@ -33,7 +33,7 @@
 											<li><a href="#">Option Four</a></li>
 										</ul>
 									</li>
-								</ul>
+								</ul>-->
 							</li>
 							<li><a href="{% url 'login' %}" class="button">Sign Up</a></li>
 						</ul>
@@ -96,7 +96,7 @@
 						<div class="col-6 col-12-narrower">
 
 							<section class="box special">
-								<span class="image featured"><img src="{% static 'images/pic02.jpg' %}" alt="" /></span>
+								<span class="image featured"><img src="{{ produto.imagem }}" alt="" /></span>
 								<h3>{{produto.nome}}</h3>
 								<p>{{produto.descricao}}</p>
 								<ul class="actions special">
@@ -113,8 +113,8 @@
 			<!-- CTA -->
 				<section id="cta">
 
-					<h2>Sign up for beta access</h2>
-					<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p>
+					<h2>Fale Conosco !</h2>
+					<p>Gostaríamos muito de ouvir de você! Estamos aqui para ajudar e valorizamos o seu feedback.</p>
 
 					<form>
 						<div class="row gtr-50 gtr-uniform">
@@ -136,11 +136,9 @@
 						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Compro da horta.All rights reserved </li>
 					</ul>
 				</footer>
 
