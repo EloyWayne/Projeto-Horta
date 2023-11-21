@@ -5,10 +5,13 @@ instalar python 3.11.5
 
 abrir o projeto, no terminal rodar 
 
-instale a máquina virtiual(venv) python -m venv venv
+instale a máquina virtiual(venv): 
+python -m venv venv
 
-depois ativa a a máquina virtiual (venv): venv\scripts\activate
+depois ativa a a máquina virtiual (venv):
+venv\scripts\activate
 
-agora instala os requirements: pip install -r requirements.txt
+agora instala os requirements:
+pip install -r requirements.txt
 
 
