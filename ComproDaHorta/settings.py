@@ -35,6 +35,7 @@ APPS_PROPIETARIO = [
 
 APPS_TERCEIROS = [
     'grappelli',
+    'rest_framework',
 ]
 
 INSTALLED_APPS = APPS_TERCEIROS + APPS_DJANGO + APPS_PROPIETARIO
